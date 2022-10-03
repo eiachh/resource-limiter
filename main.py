@@ -65,4 +65,7 @@ def getAllowances():
     print(returnAllowances)
     return returnAllowances
 
+@app.route('/ready', methods=['GET'])
+def getReadiness():
+    return "{Status: OK}"
 app.run(port=port)
