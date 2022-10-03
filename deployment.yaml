@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resource-limiter
+  labels:
+    app: resource-limiter
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resource-limiter
+  template:
+    metadata:
+      labels:
+        app: resource-limiter
+    spec:
+      containers:
+      - name: resource-limiter
+        image: eiachh/resource-limiter
+        ports:
+        - containerPort: 5000
