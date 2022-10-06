@@ -22,5 +22,6 @@ spec:
       containers:
       - name: resource-limiter
         image: eiachh/resource-limiter
+        imagePullPolicy: "Never"
         ports:
         - containerPort: 5000
