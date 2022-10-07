@@ -23,5 +23,8 @@ spec:
       - name: resource-limiter
         image: eiachh/resource-limiter
         imagePullPolicy: "Never"
+        env:
+        - name: "PYTHONUNBUFFERED"
+          value: "1"
         ports:
         - containerPort: 5000

@@ -58,10 +58,11 @@ def getAllowances():
     else:
         getDefaultAllowance(resources)
 
+    actualResources = {'actualResources': resources}
     allowanceResourcesWithHeader =  {'allowanceResources': allowanceResources}
     allowanceShipsWithHeaders =  {'allowanceShips': allowanceShips}
 
-    returnAllowances = {**allowanceResourcesWithHeader, **allowanceShipsWithHeaders}
+    returnAllowances = {**actualResources, **allowanceResourcesWithHeader, **allowanceShipsWithHeaders}
     print(returnAllowances)
     return returnAllowances
 

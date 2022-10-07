@@ -1,6 +1,7 @@
 FROM python:latest
 
-ENV resource_limiter_port=50
+ENV resource_limiter_port=5000
+ENV PYTHONUNBUFFERED=1
 
 RUN mkdir -p /app
 ADD . /app
