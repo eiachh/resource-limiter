@@ -12,5 +12,4 @@ EXPOSE 5000
 RUN pip install --no-cache-dir --upgrade pip \
   && pip install --no-cache-dir -r requirements.txt
 
-RUN export FLASK_APP=main.py
 CMD ["python", "./main.py"]
